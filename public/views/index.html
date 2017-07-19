@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Color Blocks</title>
+  <script src="vendors/angular.min.js" charset="utf-8"></script>
+  <script src="scripts/client.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="styles/weekend4.css">
+</head>
+<body ng-app='myApp'>
+  <h1>Color Blocks</h1>
+  <div ng-controller='BlocksController as mgc'>
+    <div ng-repeat='event in mgc.events' class='card'>
+      <button ng-click='mgc.heartThisYellowEvent( $index )'>Yellow!</button>
+      <img ng-src='images/yellow.png' ng-repeat='yellowhearts in event.yellowhearts' height= "18px" width="18px">
+    </div>
+
+    <div ng-repeat='event in mgc.events' class='card'>
+      <button ng-click='mgc.heartThisBlueEvent( $index )'>Blue!</button>
+      <img ng-src='images/blue.jpg' ng-repeat='bluehearts in event.bluehearts' height= "18px" width="18px">
+    </div>
+
+    <div ng-repeat='event in mgc.events' class='card'>
+      <button ng-click='mgc.heartThisRedEvent( $index )'>Red!</button>
+      <img ng-src='images/red.jpg' ng-repeat='redhearts in event.redhearts' height= "18px" width="18px">
+    </div>
+
+    <div ng-repeat='event in mgc.events' class='card'>
+      <button ng-click='mgc.heartThisGreenEvent( $index )'>Green!</button>
+      <img ng-src='images/green.jpg' ng-repeat='greenhearts in event.greenhearts' height= "18px" width="18px">
+    </div>
+  </body>
+  </html>
